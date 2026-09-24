@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE HOME | Architecture & Development, Ranchi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0e0f11;
+            --gold: #c9a35c;
+            --text: #e0e0e0;
+            --white: #ffffff;
+            --glass: rgba(14, 15, 17, 0.8);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--white); }
+        
+        /* Nav */
+        nav { position: fixed; width: 100%; padding: 20px 5%; backdrop-filter: blur(10px); background: var(--glass); display: flex; justify-content: space-between; align-items: center; z-index: 100; }
+        .logo { font-size: 1.5rem; font-weight: 700; letter-spacing: 2px; color: var(--gold); }
+        .nav-links a { color: var(--white); text-decoration: none; margin: 0 15px; font-size: 0.9rem; transition: 0.3s; }
+        .btn-gold { background: var(--gold); color: var(--bg); padding: 10px 25px; text-decoration: none; font-weight: 600; border-radius: 2px; }
+
+        /* Hero */
+        header[data-img="hero"] { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: #1a1a1a; }
+        .hero-content h1 { font-size: 4rem; margin-bottom: 20px; }
+        .hero-btns { margin-top: 30px; }
+        .hero-btns a { margin: 0 10px; }
+
+        /* Sections */
+        section { padding: 100px 5%; }
+        .stats { display: flex; justify-content: space-around; padding: 50px; border-top: 1px solid #333; border-bottom: 1px solid #333; }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .about-img { width: 100%; height: 400px; background: #222; }
+
+        /* Projects */
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .card { background: #16171a; padding: 20px; }
+        .card img { width: 100%; height: 250px; background: #333; margin-bottom: 15px; }
+        .badge { color: var(--gold); font-size: 0.8rem; text-transform: uppercase; }
+
+        /* Services */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-top: 40px; }
+        .svc { text-align: center; }
+        .svc svg { width: 40px; fill: var(--gold); margin-bottom: 15px; }
+
+        /* Form & Contact */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+        input, textarea { width: 100%; padding: 15px; margin-bottom: 15px; background: #1a1a1a; border: 1px solid #333; color: white; }
+        iframe { width: 100%; height: 300px; filter: grayscale(1) invert(1); border: 0; }
+
+        footer { text-align: center; padding: 50px; font-size: 0.8rem; border-top: 1px solid #333; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">THE HOME</div>
+    <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#studio">Studio</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <a href="#booking" class="btn-gold">Book a Consultation</a>
+</nav>
+
+<header data-img="hero">
+    <h1 class="hero-content">Designing Homes Since 2007</h1>
+    <p>Ranchi's premier architecture and development studio.</p>
+    <div class="hero-btns">
+        <a href="#projects" style="color:var(--white)">View Works</a>
+        <a href="#booking" class="btn-gold">Start Your Project</a>
+    </div>
+</header>
+
+<div class="stats">
+    <div><h3>Since 2007</h3></div>
+    <div><h3>Architecture + Development</h3></div>
+    <div><h3>Ranchi, Jharkhand</h3></div>
+</div>
+
+<section id="about" class="about-grid">
+    <div data-img="interior" class="about-img"></div>
+    <div>
+        <h2>The Design-First Approach</h2>
+        <p>Led by Er. Santosh Kumar Jaiswal, The Home integrates structural integrity with aesthetic brilliance. Since 2007, we have been shaping the skyline of Ranchi, ensuring every project is as functional as it is beautiful.</p>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Selected Projects</h2>
+    <div class="project-grid">
+        <div class="card"><img src="" data-img="project1"><h3>Residential Design</h3><span class="badge">Architecture</span></div>
+        <div class="card"><img src="" data-img="project2"><h3>Custom Home Build</h3><span class="badge">Development</span></div>
+        <div class="card"><img src="" data-img="project1b"><h3>Interior & Renovation</h3><span class="badge">Studio</span></div>
+    </div>
+</section>
+
+<section id="services">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+        <div class="svc"><svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg><h3>Architectural Design</h3></div>
+        <div class="svc"><svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg><h3>Construction</h3></div>
+        <div class="svc"><svg viewBox="0 0 24 24"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71L12 2z"/></svg><h3>Interior Design</h3></div>
+        <div class="svc"><svg viewBox="0 0 24 24"><path d="M22 10l-6-6H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V10zm-7-4.5l5.5 5.5H15V5.5z"/></svg><h3>Vastu Consultation</h3></div>
+        <div class="svc"><svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg><h3>Approvals & Liaison</h3></div>
+        <div class="svc"><svg viewBox="0 0 24 24"><path d="M13 3h-2v10h2V3zm4.83 2.17l-1.42 1.42C17.99 7.86 19 9.81 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.19 1.01-4.14 2.58-5.42L6.17 5.17C4.23 6.82 3 9.26 3 12c0 4.97 4.03 9 9 9s9-4.03 9-9c0-2.74-1.23-5.18-3.17-6.83z"/></svg><h3>Turnkey Projects</h3></div>
+    </div>
+</section>
+
+<section id="booking">
+    <div class="contact-grid">
+        <div>
+            <h2>Book a Consultation</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="Name" required>
+                <input type="tel" placeholder="Phone" required>
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Preferred Date">
+                <textarea placeholder="Message" rows="4"></textarea>
+                <button type="submit" class="btn-gold" style="border:none; cursor:pointer; width:100%">Submit Request</button>
+            </form>
+            <p id="msg" style="margin-top:20px; color:var(--gold)"></p>
+        </div>
+        <div>
+            <h2>Contact Us</h2>
+            <p>Ranchi, Jharkhand<br>sjaiswal.thehome@gmail.com</p>
+            <br>
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=85.2,23.2,85.4,23.5&layer=mapnik"></iframe>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 The Home. All rights reserved.</p>
+    <p>Demo website crafted by FLYXE Labs</p>
+</footer>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        document.getElementById('msg').innerText = "Thank you! We have received your request and will contact you shortly.";
+        this.reset();
+    });
+</script>
+
+<script src="img-hero.js"></script><script src="img-project1.js"></script><script src="img-project2.js"></script><script src="img-interior.js"></script>
+<script>
+document.querySelectorAll('[data-img]').forEach(function(el){
+  var k=el.getAttribute('data-img'); if(k==='project1b')k='project1';
+  var u=window.IMGS&&IMGS[k]; if(!u)return;
+  if(el.tagName==='IMG'){el.src=u;} else {el.style.background='linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('+u+') center/cover';}
+});
+</script>
+</body>
+</html>
