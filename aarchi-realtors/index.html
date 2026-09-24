@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aarchi Realtors | Luxury Real Estate Ranchi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0e0f11;
+            --gold: #c9a35c;
+            --text: #ffffff;
+            --gray: #a0a0a0;
+            --glass: rgba(14, 15, 17, 0.8);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+        /* Nav */
+        nav { position: sticky; top: 0; z-index: 1000; background: var(--glass); backdrop-filter: blur(10px); padding: 1.5rem 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #222; }
+        .logo { font-size: 1.5rem; font-weight: 700; letter-spacing: 2px; }
+        .nav-links a { color: var(--text); text-decoration: none; margin-left: 2rem; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--gold); }
+        .btn-gold { background: var(--gold); color: var(--bg); padding: 0.8rem 1.5rem; border: none; cursor: pointer; font-weight: 600; transition: 0.3s; }
+        .btn-gold:hover { opacity: 0.9; }
+
+        /* Hero */
+        .hero { height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 5%; }
+        .hero h1 { font-size: 4rem; margin-bottom: 1rem; }
+        .search-bar { background: #1a1b1d; padding: 1rem; display: flex; gap: 1rem; border: 1px solid #333; margin-top: 2rem; }
+        select, input { background: transparent; border: none; color: var(--text); padding: 0.5rem; outline: none; }
+
+        /* Sections */
+        section { padding: 5rem 5%; }
+        .stats { display: flex; justify-content: space-around; border-top: 1px solid #222; border-bottom: 1px solid #222; padding: 2rem 5%; font-family: 'Playfair Display'; font-size: 1.5rem; color: var(--gold); }
+        
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        [data-img="interior"] { width: 100%; height: 400px; background: #222; display: block; }
+
+        /* Listings */
+        .listings-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .card { background: #1a1b1d; padding: 1.5rem; transition: 0.3s; }
+        .card [data-img] { width: 100%; height: 200px; background: #333; margin-bottom: 1rem; display: block; }
+        .badge { color: var(--gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Services */
+        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
+        .svc-item { border: 1px solid #222; padding: 2rem; text-align: center; }
+        svg { width: 40px; fill: var(--gold); margin-bottom: 1rem; }
+
+        /* Form */
+        form { display: grid; gap: 1rem; max-width: 600px; margin: auto; }
+        input, select, textarea { padding: 1rem; background: #1a1b1d; border: 1px solid #333; color: white; }
+
+        /* Footer */
+        footer { text-align: center; padding: 2rem; border-top: 1px solid #222; color: var(--gray); font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">AARCHI REALTORS</div>
+        <div class="nav-links">
+            <a href="#listings">Listings</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <button class="btn-gold" onclick="document.getElementById('visit').scrollIntoView()">Book a Site Visit</button>
+        </div>
+    </nav>
+
+    <header class="hero" data-img="hero">
+        <h1>Find Your Place in Ranchi</h1>
+        <p>Trusted guidance for buying, selling, and renting properties in Ranchi and Hazaribagh.</p>
+        <div class="search-bar">
+            <select><option>Ranchi</option><option>Hazaribagh</option></select>
+            <select><option>Buy</option><option>Rent</option></select>
+            <button class="btn-gold">Search</button>
+        </div>
+    </header>
+
+    <div class="stats">
+        <div>Buy, Sell, Rent</div>
+        <div>Ranchi & Hazaribagh</div>
+    </div>
+
+    <section id="about" class="about-grid">
+        <div data-img="interior"></div>
+        <div>
+            <h2>Excellence in Real Estate</h2>
+            <p>At Aarchi Realtors, we bring unmatched local expertise to the property market. Whether you are looking for your first home in Lalpur or a commercial space in Hazaribagh, our team ensures a seamless experience defined by luxury and trust.</p>
+        </div>
+    </section>
+
+    <section id="listings">
+        <h2>Featured Listings</h2>
+        <div class="listings-grid">
+            <div class="card"><div data-img="project1"></div><h3>3 BHK Apartment</h3><p>Lalpur, Ranchi</p><span class="badge">For Sale</span><p>Price on Request</p></div>
+            <div class="card"><div data-img="project2"></div><h3>Residential Plot</h3><p>Kanke Road, Ranchi</p><span class="badge">For Sale</span><p>Price on Request</p></div>
+            <div class="card"><div data-img="project1b"></div><h3>2 BHK Flat</h3><p>Harmu, Ranchi</p><span class="badge">For Rent</span><p>Price on Request</p></div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="svc-item"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg><h4>Buying</h4></div>
+        <div class="svc-item"><svg viewBox="0 0 24 24"><path d="M12 2l-5.5 9h11L12 2zm0 15l-5.5-9h11L12 17z"/></svg><h4>Selling</h4></div>
+        <div class="svc-item"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg><h4>Rentals</h4></div>
+    </section>
+
+    <section id="visit">
+        <h2>Book a Site Visit</h2>
+        <form id="visitForm">
+            <input type="text" placeholder="Name" required>
+            <input type="tel" placeholder="Phone" required>
+            <input type="email" placeholder="Email" required>
+            <input type="date" required>
+            <select><option>3 BHK Apartment</option><option>Residential Plot</option><option>2 BHK Flat</option></select>
+            <button type="submit" class="btn-gold">Submit Request</button>
+        </form>
+        <p id="successMsg" style="text-align: center; margin-top: 1rem; color: var(--gold); display: none;">Request submitted successfully!</p>
+    </section>
+
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <p>Aarchi Realtors, Ranchi, Jharkhand</p>
+        <p>+91 77599 84117 | info@aarchirealtors.in</p>
+        <div style="margin-top: 2rem; height: 300px; background: #222;">
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=85.3,23.3,85.4,23.4&layer=mapnik" width="100%" height="100%"></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Aarchi Realtors. All rights reserved.</p>
+        <p>Demo website crafted by FLYXE Labs</p>
+    </footer>
+
+    <script>
+        document.getElementById('visitForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('successMsg').style.display = 'block';
+            this.reset();
+        });
+    </script>
+<script src="img-hero.js"></script><script src="img-project1.js"></script><script src="img-project2.js"></script><script src="img-interior.js"></script>
+<script>
+document.querySelectorAll('[data-img]').forEach(function(el){
+  var k=el.getAttribute('data-img'); if(k==='project1b')k='project1';
+  var u=window.IMGS&&IMGS[k]; if(!u)return;
+  if(el.tagName==='IMG'){el.src=u;} else {el.style.background='linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('+u+') center/cover';}
+});
+</script>
+</body>
+</html>
