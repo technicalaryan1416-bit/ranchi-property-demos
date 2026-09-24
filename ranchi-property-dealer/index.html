@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranchi Property Dealer | Luxury Real Estate Consultancy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0e0f11;
+            --gold: #c9a35c;
+            --text: #ffffff;
+            --text-light: #a0a0a0;
+            --glass: rgba(14, 15, 17, 0.8);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        
+        /* Sticky Nav */
+        nav { position: fixed; width: 100%; top: 0; z-index: 1000; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; background: var(--glass); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(201, 163, 92, 0.2); }
+        .logo { font-weight: 700; letter-spacing: 2px; color: var(--gold); }
+        .nav-links a { color: var(--text); text-decoration: none; margin-left: 30px; font-size: 0.9rem; transition: 0.3s; }
+        .btn-gold { background: var(--gold); color: var(--bg); padding: 10px 20px; border: none; font-weight: 600; cursor: pointer; text-decoration: none; }
+
+        /* Hero */
+        .hero { height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding-top: 80px; }
+        .hero h1 { font-size: 4rem; margin-bottom: 20px; }
+        .hero p { max-width: 600px; color: var(--text-light); margin-bottom: 30px; }
+
+        /* Search Strip */
+        .search-strip { max-width: 900px; margin: -50px auto 100px; background: #1a1b1e; padding: 30px; display: grid; grid-template-columns: 1fr 1fr auto; gap: 20px; border: 1px solid var(--gold); }
+        select, input { background: transparent; border: 1px solid #333; color: white; padding: 12px; }
+
+        /* Listings */
+        .section-padding { padding: 100px 5%; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .card { background: #1a1b1e; overflow: hidden; }
+        .card img { width: 100%; height: 250px; background: #333; object-fit: cover; }
+        .card-content { padding: 20px; }
+        .badge { color: var(--gold); font-size: 0.8rem; text-transform: uppercase; margin-bottom: 10px; display: block; }
+
+        /* Services */
+        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; }
+        .service-item { border: 1px solid #333; padding: 30px; text-align: center; }
+        .service-item svg { width: 40px; fill: var(--gold); margin-bottom: 15px; }
+
+        /* About */
+        .about-section { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .about-section img { width: 100%; height: 400px; background: #333; }
+
+        /* Form & Contact */
+        .form-section { max-width: 600px; margin: 100px auto; }
+        .form-group { margin-bottom: 20px; width: 100%; }
+        input, textarea, select { width: 100%; padding: 15px; background: #1a1b1e; border: 1px solid #333; color: white; margin-top: 5px; }
+        iframe { width: 100%; height: 300px; filter: invert(90%) hue-rotate(180deg); margin-top: 20px; }
+
+        footer { text-align: center; padding: 50px; border-top: 1px solid #333; color: var(--text-light); font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">RANCHI PROPERTY DEALER</div>
+        <div class="nav-links">
+            <a href="#">Listings</a><a href="#">Services</a><a href="#">About</a><a href="#">Contact</a>
+            <a href="#" class="btn-gold">Book a Site Visit</a>
+        </div>
+    </nav>
+
+    <header class="hero" data-img="hero">
+        <h1>Ranchi's Trusted Property Partner</h1>
+        <p>Helping families and businesses buy, sell, and rent properties across Ranchi with integrity, transparency, and local expertise.</p>
+        <div>
+            <button class="btn-gold" style="margin-right:10px;">Explore Listings</button>
+            <button style="background:transparent; border:1px solid white; color:white; padding:10px 20px;">Contact Us</button>
+        </div>
+    </header>
+
+    <div class="search-strip">
+        <select><option>Select Location</option><option>Harmu</option><option>Bariatu</option><option>Kanke Road</option><option>Lalpur</option></select>
+        <select><option>Property Type</option><option>Buy</option><option>Rent</option><option>Commercial</option></select>
+        <button class="btn-gold">Search Properties</button>
+    </div>
+
+    <section class="section-padding">
+        <h2 style="text-align:center; margin-bottom:50px;">Featured Listings</h2>
+        <div class="grid">
+            <div class="card"><img data-img="project1" src=""><div class="card-content"><span class="badge">For Sale</span><h3>3 BHK Apartment</h3><p>Harmu, Ranchi</p></div></div>
+            <div class="card"><img data-img="project2" src=""><div class="card-content"><span class="badge">For Rent</span><h3>2 BHK Independent House</h3><p>Bariatu, Ranchi</p></div></div>
+            <div class="card"><img data-img="project1b" src=""><div class="card-content"><span class="badge">For Lease</span><h3>Commercial Space</h3><p>Lalpur, Ranchi</p></div></div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background:#151618;">
+        <div class="about-section">
+            <img data-img="interior" src="">
+            <div>
+                <h2>Honest Guidance in Ranchi</h2>
+                <p>Navigating the Ranchi real estate market requires local insight. We provide end-to-end consultancy for buying, selling, and renting, ensuring every transaction is backed by verified data and clear legal understanding. Your investment in Ranchi is safe with us.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" id="contact">
+        <div style="max-width: 800px; margin: auto;">
+            <h2>Book a Site Visit</h2>
+            <form id="visitForm">
+                <input type="text" placeholder="Name" required>
+                <input type="tel" placeholder="Phone" required>
+                <input type="email" placeholder="Email" required>
+                <input type="date" placeholder="Preferred Date">
+                <textarea placeholder="Interested In (e.g., 3 BHK in Harmu)"></textarea>
+                <button type="submit" class="btn-gold" style="width:100%; margin-top:20px;">Submit Request</button>
+            </form>
+            <p id="msg" style="margin-top:20px; color:var(--gold);"></p>
+        </div>
+    </section>
+
+    <section class="section-padding" style="text-align:center;">
+        <h3>Contact Us</h3>
+        <p>Harmu, Ranchi, Jharkhand | +91 79911 09831 | info@ranchipropertydealer.com</p>
+        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=85.305,23.35,85.325,23.37&layer=mapnik" frameborder="0"></iframe>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Ranchi Property Dealer. All Rights Reserved.</p>
+        <p>Demo website crafted by FLYXE Labs</p>
+    </footer>
+
+    <script>
+        document.getElementById('visitForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('msg').innerText = "Thank you! We have received your request and will contact you shortly.";
+            this.reset();
+        });
+    </script>
+<script src="img-hero.js"></script><script src="img-project1.js"></script><script src="img-project2.js"></script><script src="img-interior.js"></script>
+<script>
+document.querySelectorAll('[data-img]').forEach(function(el){
+  var k=el.getAttribute('data-img'); if(k==='project1b')k='project1';
+  var u=window.IMGS&&IMGS[k]; if(!u)return;
+  if(el.tagName==='IMG'){el.src=u;} else {el.style.background='linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('+u+') center/cover';}
+});
+</script>
+</body>
+</html>
