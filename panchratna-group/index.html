@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panchratna Group | Luxury Real Estate Ranchi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0e0f11;
+            --gold: #c9a35c;
+            --text: #e0e0e0;
+            --white: #ffffff;
+            --glass: rgba(14, 15, 17, 0.8);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--white); }
+        
+        /* Sticky Nav */
+        nav { position: fixed; top: 0; width: 100%; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; background: var(--glass); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid #222; }
+        .logo { font-size: 1.5rem; font-weight: 700; letter-spacing: 2px; color: var(--gold); }
+        .nav-links a { color: var(--white); text-decoration: none; margin-left: 30px; font-size: 0.9rem; transition: 0.3s; }
+        .btn-gold { background: var(--gold); color: var(--bg); padding: 10px 20px; border: none; font-weight: 600; cursor: pointer; transition: 0.3s; }
+
+        /* Hero */
+        .hero { height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 5%; }
+        .hero[data-img="hero"] { background: #1a1a1a; }
+        .hero h1 { font-size: 4rem; margin-bottom: 20px; }
+
+        /* Stats */
+        .stats { display: flex; justify-content: space-around; padding: 50px 5%; border-top: 1px solid #333; border-bottom: 1px solid #333; }
+        .stat-item { text-align: center; }
+        .stat-item h3 { color: var(--gold); font-size: 2rem; }
+
+        /* About */
+        .about { padding: 100px 5%; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .about img { width: 100%; height: 400px; background: #222; object-fit: cover; }
+
+        /* Projects */
+        .projects { padding: 100px 5%; }
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
+        .card { background: #16171a; border: 1px solid #222; padding: 20px; }
+        .card img { width: 100%; height: 200px; background: #222; margin-bottom: 15px; }
+        .badge { display: inline-block; background: var(--gold); color: var(--bg); padding: 2px 8px; font-size: 0.7rem; margin-bottom: 10px; }
+
+        /* Amenities */
+        .amenities { padding: 50px 5%; display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; }
+        .icon-box { text-align: center; width: 120px; }
+
+        /* Contact & Form */
+        .contact-section { padding: 100px 5%; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+        input, select, textarea { width: 100%; padding: 12px; margin-bottom: 15px; background: #1a1a1a; border: 1px solid #333; color: white; }
+        #success-msg { display: none; color: var(--gold); margin-top: 10px; }
+
+        footer { text-align: center; padding: 40px; border-top: 1px solid #333; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">PANCHRATNA GROUP</div>
+        <div class="nav-links">
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+            <button class="btn-gold" onclick="document.getElementById('contact').scrollIntoView()">Book a Site Visit</button>
+        </div>
+    </nav>
+
+    <section class="hero" data-img="hero">
+        <h1>Ranchi's Landmark Addresses</h1>
+        <p>Redefining luxury living and commercial excellence with 3 & 4 BHK duplexes and premium spaces.</p>
+        <div style="margin-top: 30px;">
+            <button class="btn-gold" onclick="document.getElementById('projects').scrollIntoView()">Explore Projects</button>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="stat-item"><h3>Duplex Homes</h3><p>Premium Living</p></div>
+        <div class="stat-item"><h3>Commercial</h3><p>Strategic Spaces</p></div>
+        <div class="stat-item"><h3>Main Road</h3><p>Prime Ranchi Location</p></div>
+    </section>
+
+    <section class="about" id="about">
+        <div>
+            <h2>Excellence in Construction</h2>
+            <p>Panchratna Group is a premier builder in Ranchi, Jharkhand, committed to delivering architectural brilliance. With a focus on quality, aesthetics, and strategic locations, we create spaces that define status and comfort.</p>
+        </div>
+        <img data-img="interior" alt="About Us">
+    </section>
+
+    <section class="projects" id="projects">
+        <h2 style="text-align: center;">Our Signature Projects</h2>
+        <div class="project-grid">
+            <div class="card">
+                <img data-img="project1">
+                <span class="badge">Commercial - Ready</span>
+                <h3>Panchratna Galleria</h3>
+                <p>Sarjana Chowk, Main Road</p>
+                <p>Showrooms & Offices</p>
+            </div>
+            <div class="card">
+                <img data-img="project2">
+                <span class="badge">Residential - Ready</span>
+                <h3>Panchratna Kunj</h3>
+                <p>Ranchi</p>
+                <p>3 & 4 BHK Duplex Flats</p>
+            </div>
+            <div class="card">
+                <img data-img="project1b">
+                <span class="badge">Upcoming</span>
+                <h3>Panchratna Galaxy</h3>
+                <p>Ranchi</p>
+                <p>Premium Apartments</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="amenities">
+        <div class="icon-box"><svg width="40" height="40" fill="none" stroke="#c9a35c" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg><p>Prime Location</p></div>
+        <div class="icon-box"><svg width="40" height="40" fill="none" stroke="#c9a35c" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"></rect></svg><p>Power Backup</p></div>
+        <div class="icon-box"><svg width="40" height="40" fill="none" stroke="#c9a35c" viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"></path></svg><p>Lift & Parking</p></div>
+        <div class="icon-box"><svg width="40" height="40" fill="none" stroke="#c9a35c" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg><p>24x7 Security</p></div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div>
+            <h2>Contact Us</h2>
+            <p>311 Panchratna Galleria, Sarjana Chowk, Main Road, Ranchi 834001</p>
+            <p>Phone: +91 92978 50001</p>
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=85.325,23.36,85.345,23.375&layer=mapnik" width="100%" height="250" style="margin-top:20px;"></iframe>
+        </div>
+        <form id="visitForm">
+            <input type="text" placeholder="Name" required>
+            <input type="tel" placeholder="Phone" required>
+            <input type="email" placeholder="Email">
+            <select><option>Panchratna Galleria</option><option>Panchratna Kunj</option><option>Panchratna Galaxy</option></select>
+            <button type="submit" class="btn-gold">Book a Site Visit</button>
+            <p id="success-msg">Thank you! We will contact you shortly.</p>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Panchratna Group. All Rights Reserved.</p>
+        <p style="margin-top:10px; opacity:0.5;">Demo website crafted by FLYXE Labs</p>
+    </footer>
+
+    <script>
+        document.getElementById('visitForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.style.display = 'none';
+            document.getElementById('success-msg').style.display = 'block';
+        });
+    </script>
+<script src="img-hero.js"></script><script src="img-project1.js"></script><script src="img-project2.js"></script><script src="img-interior.js"></script>
+<script>
+document.querySelectorAll('[data-img]').forEach(function(el){
+  var k=el.getAttribute('data-img'); if(k==='project1b')k='project1';
+  var u=window.IMGS&&IMGS[k]; if(!u)return;
+  if(el.tagName==='IMG'){el.src=u;} else {el.style.background='linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('+u+') center/cover';}
+});
+</script>
+</body>
+</html>
